@@ -10,4 +10,13 @@
 
 @interface BusStopDetails : NSObject
 
+@property NSNumber *busStopID;
+@property NSString *busTransfers;
+@property NSString *intermodalTransfers;
+@property NSNumber *stopLatitude;
+@property NSNumber *stopLongitude;
+@property NSString *busStopWebAddress;
+@property NSString *busStopName;
+
+
 @end

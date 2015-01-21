@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		94367FA31A6F079C000D1514 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367FA21A6F079C000D1514 /* main.m */; };
 		94367FA61A6F079C000D1514 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367FA51A6F079C000D1514 /* AppDelegate.m */; };
-		94367FA91A6F079C000D1514 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367FA81A6F079C000D1514 /* ViewController.m */; };
+		94367FA91A6F079C000D1514 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367FA81A6F079C000D1514 /* MapViewController.m */; };
 		94367FAC1A6F079C000D1514 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94367FAA1A6F079C000D1514 /* Main.storyboard */; };
 		94367FAE1A6F079C000D1514 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94367FAD1A6F079C000D1514 /* Images.xcassets */; };
 		94367FB11A6F079C000D1514 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94367FAF1A6F079C000D1514 /* LaunchScreen.xib */; };
 		94367FBD1A6F079C000D1514 /* GetOnDatBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367FBC1A6F079C000D1514 /* GetOnDatBusTests.m */; };
+		94367FC71A6F07AB000D1514 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94367FC61A6F07AB000D1514 /* MapKit.framework */; };
+		94367FCA1A6F0BDD000D1514 /* BusStopDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367FC91A6F0BDD000D1514 /* BusStopDetails.m */; };
+		94367FCD1A6F366C000D1514 /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367FCC1A6F366C000D1514 /* CustomAnnotation.m */; };
+		94367FD01A6F3B34000D1514 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367FCF1A6F3B34000D1514 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +36,21 @@
 		94367FA21A6F079C000D1514 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		94367FA41A6F079C000D1514 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94367FA51A6F079C000D1514 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		94367FA71A6F079C000D1514 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		94367FA81A6F079C000D1514 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		94367FA71A6F079C000D1514 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		94367FA81A6F079C000D1514 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		94367FAB1A6F079C000D1514 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94367FAD1A6F079C000D1514 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		94367FB01A6F079C000D1514 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		94367FB61A6F079C000D1514 /* GetOnDatBusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetOnDatBusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94367FBB1A6F079C000D1514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94367FBC1A6F079C000D1514 /* GetOnDatBusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetOnDatBusTests.m; sourceTree = "<group>"; };
+		94367FC61A6F07AB000D1514 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		94367FC81A6F0BDD000D1514 /* BusStopDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusStopDetails.h; sourceTree = "<group>"; };
+		94367FC91A6F0BDD000D1514 /* BusStopDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusStopDetails.m; sourceTree = "<group>"; };
+		94367FCB1A6F366C000D1514 /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
+		94367FCC1A6F366C000D1514 /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
+		94367FCE1A6F3B34000D1514 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		94367FCF1A6F3B34000D1514 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94367FC71A6F07AB000D1514 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +75,7 @@
 		94367F941A6F079C000D1514 = {
 			isa = PBXGroup;
 			children = (
+				94367FC61A6F07AB000D1514 /* MapKit.framework */,
 				94367F9F1A6F079C000D1514 /* GetOnDatBus */,
 				94367FB91A6F079C000D1514 /* GetOnDatBusTests */,
 				94367F9E1A6F079C000D1514 /* Products */,
@@ -81,11 +94,17 @@
 		94367F9F1A6F079C000D1514 /* GetOnDatBus */ = {
 			isa = PBXGroup;
 			children = (
+				94367FAA1A6F079C000D1514 /* Main.storyboard */,
 				94367FA41A6F079C000D1514 /* AppDelegate.h */,
 				94367FA51A6F079C000D1514 /* AppDelegate.m */,
-				94367FA71A6F079C000D1514 /* ViewController.h */,
-				94367FA81A6F079C000D1514 /* ViewController.m */,
-				94367FAA1A6F079C000D1514 /* Main.storyboard */,
+				94367FA71A6F079C000D1514 /* MapViewController.h */,
+				94367FA81A6F079C000D1514 /* MapViewController.m */,
+				94367FCE1A6F3B34000D1514 /* DetailViewController.h */,
+				94367FCF1A6F3B34000D1514 /* DetailViewController.m */,
+				94367FC81A6F0BDD000D1514 /* BusStopDetails.h */,
+				94367FC91A6F0BDD000D1514 /* BusStopDetails.m */,
+				94367FCB1A6F366C000D1514 /* CustomAnnotation.h */,
+				94367FCC1A6F366C000D1514 /* CustomAnnotation.m */,
 				94367FAD1A6F079C000D1514 /* Images.xcassets */,
 				94367FAF1A6F079C000D1514 /* LaunchScreen.xib */,
 				94367FA01A6F079C000D1514 /* Supporting Files */,
@@ -219,9 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94367FA91A6F079C000D1514 /* ViewController.m in Sources */,
+				94367FCD1A6F366C000D1514 /* CustomAnnotation.m in Sources */,
+				94367FA91A6F079C000D1514 /* MapViewController.m in Sources */,
+				94367FCA1A6F0BDD000D1514 /* BusStopDetails.m in Sources */,
 				94367FA61A6F079C000D1514 /* AppDelegate.m in Sources */,
 				94367FA31A6F079C000D1514 /* main.m in Sources */,
+				94367FD01A6F3B34000D1514 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

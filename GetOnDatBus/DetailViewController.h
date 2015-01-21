@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DetailViewController.h
 //  GetOnDatBus
 //
 //  Created by Evan Vandenberg on 1/20/15.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomAnnotation.h"
 
-@interface MapViewController : UIViewController
+@interface DetailViewController : UIViewController
 
+@property BusStopDetails *busStopAnnotation;
 
 @end
-
