@@ -13,12 +13,13 @@
 #import <MapKit/MapKit.h>
 
 
-@interface MapViewController () <MKMapViewDelegate>
+@interface MapViewController () <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property NSString *urlString;
 @property NSMutableArray *transportationWebDataArray;
 @property NSMutableArray *busStopDetailsArray;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -30,9 +31,11 @@
     self.busStopDetailsArray =[NSMutableArray new];
     self.urlString = @"https://s3.amazonaws.com/mobile-makers-lib/bus.json";
     [self pullDataFromTrainSite:self.urlString];
+    self.tableView.hidden = YES;
     //[self mapView:self.mapView regionWillChangeAnimated:YES];
 }
 
+//----------------------------------- Handle JSON Call ---------------------------------------------
 
 -(void)pullDataFromTrainSite :(NSString *)webURL
 {
@@ -68,6 +71,7 @@
         [self.busStopDetailsArray addObject:busDetails];
     }
 
+    [self.tableView reloadData];
     [self placePinOnCoordinateLocations];
 
     CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake(41.878, -87.633);
@@ -76,6 +80,7 @@
     [self.mapView setRegion:region animated:YES];
 }
 
+//-----------------------------------------Handle Map View Details----------------------------
 
 //Place a pin at each stops coordinates
 -(void)placePinOnCoordinateLocations
@@ -118,6 +123,39 @@
         return pin;
 }
 
+//----------------------------------------- Handle Table View-----------------------------------------
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    BusStopDetails *details = [self.busStopDetailsArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = details.busStopName;
+
+    return cell;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.busStopDetailsArray.count;
+}
+
+
+- (IBAction)onSegmentButtonPressed:(UISegmentedControl *)sender
+{
+    if (sender.selectedSegmentIndex == 0)
+    {
+        self.tableView.hidden = YES;
+        self.mapView.hidden = NO;
+    }
+
+    if (sender.selectedSegmentIndex == 1)
+    {
+        self.tableView.hidden = NO;
+        self.mapView.hidden = YES;
+    }
+}
+
+//---------------------------------------- Handle Segue ------------------------------------
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
@@ -128,9 +166,19 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+
     DetailViewController *vc = segue.destinationViewController;
+
+    if ([segue.identifier isEqualToString:@"CellSegue"])
+    {
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    vc.busStopAnnotation = [self.busStopDetailsArray objectAtIndex:path.row];
+    }
+    if ([segue.identifier isEqualToString:@"DetailViewController"])
+    {
     vc.busStopAnnotation = sender;
     NSLog(@"Bus Stop AnnontE %@", vc.busStopAnnotation);
+    }
 }
 
 

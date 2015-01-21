@@ -25,7 +25,15 @@
     self.navigationItem.title = self.busStopAnnotation.busStopName;
     self.addressLabel.text = self.busStopAnnotation.busStopWebAddress;
     self.busRouteLabel.text = self.busStopAnnotation.busTransfers;
+
+    if (self.busStopAnnotation.intermodalTransfers == nil)
+    {
+        self.intermodalLabel.text = @"No Intermodal Connections At This Stop";
+    }
+    else
+    {
     self.intermodalLabel.text = self.busStopAnnotation.intermodalTransfers;
+    }
 }
 
 -(void)uploadDataToDetailView
