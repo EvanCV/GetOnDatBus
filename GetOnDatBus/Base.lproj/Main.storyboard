@@ -167,18 +167,28 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicago_pic" translatesAutoresizingMaskIntoConstraints="NO" id="A9k-qS-TM0">
+                                <rect key="frame" x="0.0" y="440" width="320" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Hii-Bx-JsC"/>
+                                    <constraint firstAttribute="height" constant="128" id="kXa-ic-MTq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="0dB-Gf-FbD" secondAttribute="centerX" id="2YH-lk-Bzq"/>
                             <constraint firstItem="0dB-Gf-FbD" firstAttribute="top" secondItem="Ui4-Ba-9oL" secondAttribute="bottom" constant="14" id="2mO-80-2iZ"/>
+                            <constraint firstAttribute="trailing" secondItem="A9k-qS-TM0" secondAttribute="trailing" id="9Xs-UZ-NKM"/>
                             <constraint firstAttribute="centerX" secondItem="XvT-2Y-E2G" secondAttribute="centerX" id="9aj-fZ-6ZA"/>
+                            <constraint firstItem="A9k-qS-TM0" firstAttribute="leading" secondItem="Bya-1j-1cA" secondAttribute="leading" id="CUM-Eh-9qc"/>
                             <constraint firstAttribute="centerX" secondItem="Ui4-Ba-9oL" secondAttribute="centerX" id="D5L-JE-2Oj"/>
                             <constraint firstAttribute="centerX" secondItem="zYK-Ve-9zM" secondAttribute="centerX" id="DBQ-gq-DWG"/>
                             <constraint firstItem="XvT-2Y-E2G" firstAttribute="top" secondItem="ynF-KE-jE6" secondAttribute="bottom" constant="8" id="HCX-E7-Z2h"/>
                             <constraint firstItem="Ui4-Ba-9oL" firstAttribute="top" secondItem="XvT-2Y-E2G" secondAttribute="bottom" constant="25" id="ZoH-9C-k19"/>
                             <constraint firstAttribute="centerX" secondItem="JVA-Fn-fLQ" secondAttribute="centerX" id="cGd-7g-8p4"/>
                             <constraint firstItem="zYK-Ve-9zM" firstAttribute="top" secondItem="JVA-Fn-fLQ" secondAttribute="bottom" constant="8" id="glS-qi-pVw"/>
+                            <constraint firstItem="pB4-ya-xZH" firstAttribute="top" secondItem="A9k-qS-TM0" secondAttribute="bottom" id="jT7-JO-YXM"/>
                             <constraint firstItem="ynF-KE-jE6" firstAttribute="top" secondItem="zYK-Ve-9zM" secondAttribute="bottom" constant="30" id="kvT-z9-fxQ"/>
                             <constraint firstItem="JVA-Fn-fLQ" firstAttribute="top" secondItem="xiy-Of-wIc" secondAttribute="bottom" constant="31" id="pWw-Jd-wqB"/>
                             <constraint firstAttribute="centerX" secondItem="ynF-KE-jE6" secondAttribute="centerX" constant="-4" id="t7f-xC-PsT"/>
@@ -214,6 +224,9 @@
             <point key="canvasLocation" x="181" y="334"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chicago_pic" width="150" height="80"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

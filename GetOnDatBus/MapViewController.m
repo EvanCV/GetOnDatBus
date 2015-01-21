@@ -72,8 +72,11 @@
     }
 
     [self.tableView reloadData];
+
+    //Needs to be called once all busDetails objects have been added to busStopDetailsArray
     [self placePinOnCoordinateLocations];
 
+    //Sets the initial zoom to enable a limited view of only our bus stops
     CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake(41.878, -87.633);
     MKCoordinateSpan span = MKCoordinateSpanMake(0.45, 0.45);
     MKCoordinateRegion region = MKCoordinateRegionMake(centerCoordinate, span);
@@ -87,6 +90,7 @@
 {
     for (BusStopDetails *details in self.busStopDetailsArray)
     {
+        //Remember long&Lat need double type values
         CLLocationCoordinate2D  ctrpoint;
         ctrpoint.latitude = [details.stopLatitude doubleValue];
         ctrpoint.longitude = [details.stopLongitude doubleValue];
@@ -155,6 +159,8 @@
     }
 }
 
+
+
 //---------------------------------------- Handle Segue ------------------------------------
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
@@ -169,6 +175,7 @@
 
     DetailViewController *vc = segue.destinationViewController;
 
+    //I manually changed the segue identifiers
     if ([segue.identifier isEqualToString:@"CellSegue"])
     {
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
@@ -177,7 +184,6 @@
     if ([segue.identifier isEqualToString:@"DetailViewController"])
     {
     vc.busStopAnnotation = sender;
-    NSLog(@"Bus Stop AnnontE %@", vc.busStopAnnotation);
     }
 }
 
